@@ -1,10 +1,10 @@
 {
   "name": "rekey",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A helper of PaintToolSAI on tablets.",
   "main": "main.html",
   "scripts": {
-    "start": "nw.exe .",
+    "start": "nw .",
     "rebuild": "nw-gyp rebuild --target=0.18.7 --arch=x64"
   },
   "author": "Prace Fen",
