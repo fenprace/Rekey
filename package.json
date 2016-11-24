@@ -1,7 +1,7 @@
 {
-  "name": "help-sai",
+  "name": "rekey",
   "version": "0.0.1",
-  "description": "A helper of PaintToolSAI.",
+  "description": "A helper of PaintToolSAI on tablets.",
   "main": "main.html",
   "scripts": {
     "start": "nw.exe .",
@@ -10,7 +10,7 @@
   "author": "Prace Fen",
   "license": "MIT",
   "keywords": [
-    "NW",
+    "NW.js",
     "Node-Webkit",
     "SAI",
     "GUI"
