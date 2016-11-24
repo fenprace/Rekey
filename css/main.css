@@ -29,6 +29,11 @@ body { -webkit-app-region: drag; }
 
 #buttonExit { background-color: indianred; }
 
+#buttonCheck {
+  width: 100%;
+  clear: both;
+}
+
 .buttonClicked { opacity: 0.5; }
 
 .buttonPressed { background-color: dodgerblue; }

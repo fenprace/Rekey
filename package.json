@@ -5,7 +5,7 @@
   "main": "main.html",
   "scripts": {
     "start": "nw .",
-    "rebuild": "nw-gyp rebuild --target=0.18.7 --arch=x64"
+    "rebuild": "cd node_modules/robotjs && nw-gyp rebuild --target=0.18.7 --arch=x64"
   },
   "author": "Prace Fen",
   "license": "MIT",

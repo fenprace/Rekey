@@ -4,12 +4,14 @@ Robot.setKeyboardDelay(10);
 var Gui = require('nw.gui');
 var Win = Gui.Window.get();
 Win.setAlwaysOnTop(true);
-Win.resizeTo(160, 240);
+Win.resizeTo(160, 320);
 
+// Exit
 $('#buttonExit').click(function() {
   Win.close();
 });
 
+// changeWindow Event Listener
 $(window).on('changeWindow', function() {
   Robot.keyTap('escape', 'alt');
 });
@@ -24,6 +26,7 @@ Win.on('focus', function() {
   });
 });
 
+// Undo & Redo
 $('#buttonUndo').click(function() {
   $(this).addClass('buttonClicked');
 
@@ -46,6 +49,7 @@ $('#buttonRedo').click(function() {
   Robot.keyTap('y', 'control');
 });
 
+// Move
 var spaceDown = false;
 $('#buttonMove').click(function() {
   if (spaceDown) {
@@ -61,6 +65,7 @@ $('#buttonMove').click(function() {
   }
 });
 
+// Erase
 var eraserDown = false;
 $('#buttonEraser').click(function() {
   if (eraserDown) {
@@ -74,4 +79,28 @@ $('#buttonEraser').click(function() {
     Robot.keyTap('e');
     eraserDown = true;
   }
+});
+
+// Transform
+$('#buttonTransform').click(function() {
+  $(this).addClass('buttonClicked');
+
+  setTimeout(function() {
+    $('#buttonTransform').removeClass('buttonClicked');
+  }, 400);
+  
+  $(window).trigger('changeWindow');
+  Robot.keyTap('t', 'control');
+});
+
+// Check
+$('#buttonCheck').click(function() {
+  $(this).addClass('buttonClicked');
+
+  setTimeout(function() {
+    $('#buttonCheck').removeClass('buttonClicked');
+  }, 400);
+  
+  $(window).trigger('changeWindow');
+  Robot.keyTap('enter');
 });
