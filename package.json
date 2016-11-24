@@ -1,0 +1,26 @@
+{
+  "name": "help-sai",
+  "version": "0.0.1",
+  "description": "A helper of PaintToolSAI.",
+  "main": "main.html",
+  "scripts": {
+    "start": "nw.exe .",
+    "rebuild": "nw-gyp rebuild --target=0.18.7 --arch=x64"
+  },
+  "author": "Prace Fen",
+  "license": "MIT",
+  "keywords": [
+    "NW",
+    "Node-Webkit",
+    "SAI",
+    "GUI"
+  ],
+  "devDependencies": {
+    "robotjs": "latest",
+    "nw": "0.18.7",
+    "nw-gyp": "latest"
+  },
+  "window": {
+    "frame": false
+  }
+}

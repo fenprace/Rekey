@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body { -webkit-app-region: drag; }
+
+.button {
+  -webkit-app-region: no-drag;
+  background-color: deepskyblue;
+  color: white;
+  width: 50%;
+  height: 80px;
+  float: left;
+  font-size: 30px;
+  line-height: 80px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s, opacity 0.2s ease-out;  
+}
+
+#buttonUndo, #buttonRedo { font-size: 36px; }
+
+#buttonDrag {
+  -webkit-app-region: drag;
+   background-color: whitesmoke;
+   color: black;
+}
+
+#buttonExit { background-color: indianred; }
+
+.buttonClicked { opacity: 0.5; }
+
+.buttonPressed { background-color: dodgerblue; }
+
+i { line-height: 80px !important; }
