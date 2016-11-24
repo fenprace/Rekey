@@ -46,12 +46,6 @@ $('#buttonRedo').click(function() {
   Robot.keyTap('y', 'control');
 });
 
-$('#buttonMove').toggle(function() {
-  $(this).removeClass('buttonPressed');
-}, function() {
-  $(this).addClass('buttonPressed');
-}); 
-
 var spaceDown = false;
 $('#buttonMove').click(function() {
   if (spaceDown) {
