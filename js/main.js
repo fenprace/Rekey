@@ -89,6 +89,10 @@ $('#buttonTransform').click(function() {
     $('#buttonTransform').removeClass('buttonClicked');
   }, 400);
   
+  $('#buttonCheck').css({'z-index': 2, height: '80px'});
+  $('#buttonCheck i').css({opacity: 1});
+  $('#cover').css({'z-index': 1, display: 'initial'});
+
   $(window).trigger('changeWindow');
   Robot.keyTap('t', 'control');
 });
@@ -101,6 +105,10 @@ $('#buttonCheck').click(function() {
     $('#buttonCheck').removeClass('buttonClicked');
   }, 400);
   
+  $('#buttonCheck').css({'z-index': 0, height: 0});
+  $('#buttonCheck i').css({opacity: 0});
+  $('#cover').css({'z-index': -1, display: 'none'});
+
   $(window).trigger('changeWindow');
   Robot.keyTap('enter');
 });

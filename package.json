@@ -21,6 +21,7 @@
     "nw-gyp": "latest"
   },
   "window": {
-    "frame": false
+    "frame": false,
+    "transparent": true
   }
 }
