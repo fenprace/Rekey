@@ -4,7 +4,7 @@
   "description": "A helper of PaintToolSAI on tablets.",
   "main": "main.html",
   "scripts": {
-    "start": "nw .",
+    "start": "nw . --disabled-gpu --force-cpu-draw",
     "rebuild": "cd node_modules/robotjs && nw-gyp rebuild --target=0.18.7 --arch=x64"
   },
   "author": "Prace Fen",

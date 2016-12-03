@@ -5,6 +5,7 @@ var Gui = require('nw.gui');
 var Win = Gui.Window.get();
 Win.setAlwaysOnTop(true);
 Win.resizeTo(160, 320);
+Win.setResizable(false);
 
 // Exit
 $('#buttonExit').click(function() {
@@ -54,11 +55,19 @@ var spaceDown = false;
 $('#buttonMove').click(function() {
   if (spaceDown) {
     $(this).removeClass('buttonPressed');
+
+    $('#buttonMove').css({'z-index': 0});
+    $('#cover').css({'z-index': -1, display: 'none'});
+   
     Robot.keyTap('escape', 'alt');
     Robot.keyToggle('space', 'up');
     spaceDown = false;
   } else {
     $(this).addClass('buttonPressed');
+
+    $('#buttonMove').css({'z-index': 2});
+    $('#cover').css({'z-index': 1, display: 'initial'});
+
     Robot.keyTap('escape', 'alt');
     Robot.keyToggle('space', 'down');
     spaceDown = true;
